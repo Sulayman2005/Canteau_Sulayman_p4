@@ -1,66 +1,79 @@
 *,
 ::before,
 ::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: "Roboto", sans-serif;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
-
 
 header {
-    font-family: "Shrikhand", cursive;
-    text-align: center;
-    box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
-    padding: 0.3rem;
-    margin: 0;
-    position: relative;
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  padding: 0.3rem;
+  margin: 0;
+  position: relative;
 }
 
-main .location-dot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 17px;
-    background-color: #f3f3f3;
-    padding: 0.5rem;
+.location-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  background-color: #f3f3f3;
+  padding: 0.5rem;
 }
-
-/* Introduction */
+.location-dot i {
+  font-size: 1.5rem;
+}
 
 .introduction {
-    text-align: center;
+  text-align: center;
 }
-
 .introduction h2 {
-    margin-top: 2rem;
-    font-size: 2rem;
+  margin-top: 2rem;
+  font-size: 2rem;
 }
-
 .introduction p {
-    font-size: 1rem;
+  font-size: 1rem;
 }
-
 .introduction button {
-    color: white;
-    font-weight: 200;
-    font-size: 1.3rem;
-    padding: 1rem 1rem;
-    border: none;
-    border-radius: 2rem;
-    box-shadow: 0px 4px 10px 0px #00000040;
-    background-image: linear-gradient(
-        rgba(147, 86, 220, 0.9),
-        rgba(255, 121, 218, 0.9));
+  color: white;
+  font-weight: 200;
+  font-size: 1.3rem;
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 2rem;
+  background-image: linear-gradient(rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
 }
-
 .introduction button:hover {
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 
+.item ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 27px;
+}
+@media (max-width: 800px) {
+  .item ol ol {
+    flex-direction: column;
+  }
+}
+.item ol li {
+  background-color: #f6f6f6;
+  padding: 1rem 2rem;
+  border: 1px solid blue;
+  flex-grow: 1;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.item ol li:hover {
+  transform: scale(1.02);
+}
 
-
-
-
+/*# sourceMappingURL=style.css.map */

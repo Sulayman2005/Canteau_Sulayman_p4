@@ -1,0 +1,11 @@
+.location-dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    background-color: #f3f3f3;
+    padding: 0.5rem;
+    & i {
+      font-size: 1.5rem;
+    }
+}
