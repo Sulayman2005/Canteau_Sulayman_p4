@@ -9,6 +9,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+main {
+  padding: 0 1rem;
+}
+
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -54,26 +58,52 @@ header {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 
+.item {
+  counter-reset: steps;
+}
 .item ol {
   display: flex;
-  flex-wrap: wrap;
-  gap: 27px;
+  gap: 2rem;
 }
-@media (max-width: 800px) {
-  .item ol ol {
+@media (max-width: 1000px) {
+  .item ol {
     flex-direction: column;
   }
 }
-.item ol li {
+.item li {
+  position: relative;
+  list-style-type: none;
   background-color: #f6f6f6;
-  padding: 1rem 2rem;
-  border: 1px solid blue;
+  padding: 1.5rem 2rem;
   flex-grow: 1;
   border-radius: 1rem;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
 }
-.item ol li:hover {
+.item li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  color: white;
+  background-color: #9356dc;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 1rem;
+  background-color: #9356DC;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 1rem;
+  left: -1rem;
+}
+.item li:hover {
   transform: scale(1.02);
+}
+.item li i.fas {
+  margin-right: 1rem;
+  color: #7e7e7e;
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
