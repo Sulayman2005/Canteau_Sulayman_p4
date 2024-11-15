@@ -1,0 +1,72 @@
+@use"../utils/color";
+@use"../utils/mixins";
+
+
+#homepage {
+    .menus {
+        background-color: #f6f6f6;
+        padding: inherit;
+        h2 {
+            padding: 2rem 0;
+            margin: 0;
+        }
+        .menus_cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            padding-bottom: 3rem;
+            @media (max-width: 800px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .new {
+                position: relative;
+            }
+            .new::before {
+                content: "Nouveau";
+                position: absolute;
+                height: 2rem;
+                width: 5rem;
+                background-color: color.$tertiaire;
+                color: darken(color.$tertiaire, 50%);
+                display: grid;
+                place-items: center;
+                top: 1rem;
+                right: 1rem;
+            }
+        }
+    
+        .card {
+            &_image {
+                height: 15rem;
+                border-radius: 1rem 1rem 0 0;
+                background-size: cover;
+            }
+            &.card1 .card_image {
+                background-image: url("../../Images/menu_1.jpg")
+            }
+            &.card2 .card_image {
+                background-image: url("../../Images/menu_2.jpg")
+            }
+            &.card3 .card_image {
+                background-image: url("../../Images/menu_3.jpg")
+            }
+            &.card4 .card_image {
+                background-image: url("../../Images/menu_4.jpg")
+            }
+            &_description {
+                position: relative;
+                border-radius: 0 0 1rem 1rem;
+                background-color: white;
+                @include mixins.animated-heart;
+                font-family: roboto;
+                h3,
+                p {
+                    padding: 0.3rem;
+                }
+                &:hover.fas {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

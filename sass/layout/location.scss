@@ -3,9 +3,12 @@
     align-items: center;
     justify-content: center;
     gap: 17px;
-    background-color: #f3f3f3;
-    padding: 0.5rem;
-    & i {
+    background: #EAEAEA;
+    padding: 1rem;
+    i {
       font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 1rem;
     }
 }

@@ -1,48 +1,60 @@
-@use"../utils/box-shadow";
-@use "../utils/zoom.scss";
-@use "../utils/color.scss";
+@use "../utils/mixins";
+@use "../utils/color";
 
 .item {
-    counter-reset: steps;
+    content: counter(steps);
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    padding: inherit;
     & ol {
         display: flex;
         gap: 2rem;
-        @media (max-width: 1000px) {
+        @media (max-width: 800px) {
             flex-direction: column;
         }
     }
     & li {
         position: relative;
+        display: flex;
+        align-items: center;
         &::before {
             content: counter(steps);
             counter-increment: steps;
             color: white;
             background-color: color.$purple;
-            width: 0.5rem;
-            height: 0.5rem;
-            border-radius: 1rem;
-            background-color: #9356DC;
             width: 2rem;
             height: 2rem;
             display: grid;
             place-items: center;
             border-radius: 50%;
             position: absolute;
-            bottom: 1rem;
+            bottom: 6%;
             left: -1rem;
+            transform: translateY(-50%);
         }
         list-style-type: none;
+        flex-grow: 1;
         background-color: #f6f6f6;
         padding: 1.5rem 2rem;
-        flex-grow: 1;
         border-radius: 1rem;
-        @include box-shadow.base-shadow;
+        @include mixins.base-shadow;
         &:hover {
-            @include zoom.zoom;
+            @include mixins.zoom;
+            background-color: color.$lightpurple;
         }
         & i.fas {
             margin-right: 1rem;
             color: color.$lightgrey;
+            font-size: 1.5rem;
+        }
+        & i.fa-list-ul {
+            margin-right: 1rem;
+            color: color.$lightgrey;
+            font-size: 1.5rem;
+        }
+        & i.fa-store {
+            margin-right: 1rem;
+            color: color.$purple;
             font-size: 1.5rem;
         }
     }
