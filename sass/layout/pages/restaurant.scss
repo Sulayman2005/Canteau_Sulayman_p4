@@ -1,6 +1,6 @@
-@use "../../utils/mixins";
-@use "../../utils/color";
-@use "../../utils/animation";
+@use "./../../utils/mixins";
+@use "./../../utils/color";
+@use "./../../utils/animation";
 
 #page-resto {
     header:before {
@@ -128,7 +128,7 @@
                         margin-right: 0;
                     }
                     i {
-                        @include animation.slidein;
+                        animation-name: slidein;
                         animation: slidein 0.5s ease-in-out;
                     }
                 }
