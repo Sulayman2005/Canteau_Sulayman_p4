@@ -31,6 +31,9 @@
     opacity: 0.9;
     animation: desepear 200ms $animation_duration forwards;
     transform-origin: top;
+    & i {
+        color: color.$purple;
+    }
 }
 
 @keyframes desepear {
