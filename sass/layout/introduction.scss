@@ -22,7 +22,7 @@
 .loader {
     $animation_duration: 3s;
     position: fixed;
-    background-color: #ffffff;
+    background-color: color.$lightpurple;
     display: grid;
     place-items: center;
     height: 100vh;
