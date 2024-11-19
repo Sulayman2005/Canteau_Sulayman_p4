@@ -215,16 +215,16 @@ header {
   background-size: cover;
 }
 #homepage .menus .card.card1 .card_image {
-  background-image: url("./../../Images/menu_1.jpg");
+  background-image: url("../Images/menu_1.jpg");
 }
 #homepage .menus .card.card2 .card_image {
-  background-image: url("./../../Images/menu_2.jpg");
+  background-image: url("../Images/menu_2.jpg");
 }
 #homepage .menus .card.card3 .card_image {
-  background-image: url("./../../Images/menu_3.jpg");
+  background-image: url("../Images/menu_3.jpg");
 }
 #homepage .menus .card.card4 .card_image {
-  background-image: url("./../../Images/menu_4.jpg");
+  background-image: url("../Images/menu_4.jpg");
 }
 #homepage .menus .card_description {
   position: relative;
