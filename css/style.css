@@ -151,13 +151,6 @@ header {
   border-radius: 1rem;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
 }
-@media (min-width: 64rem) {
-  .item li {
-    flex: 1;
-    margin: 0;
-    margin-left: 2rem;
-  }
-}
 .item li::before {
   content: counter(steps);
   counter-increment: steps;
