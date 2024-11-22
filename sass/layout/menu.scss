@@ -4,8 +4,13 @@
 
 #homepage {
     .menus {
+        padding: 2rem;
         background-color: #f6f6f6;
-        padding: inherit;
+        .container {
+            max-width: 1280px;
+            margin: auto;
+            position: relative;
+        }
         h2 {
             padding: 2rem 0;
             margin: 0;
