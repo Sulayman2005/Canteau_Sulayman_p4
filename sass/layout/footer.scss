@@ -1,18 +1,53 @@
+@use"../utils/color.scss";
+
 footer {
-    .container {
-        max-width: 1440px;
-        margin: auto;
-        position: relative;
-    }
+    position: relative;
     background-color: #353535;
-    color: #FFFFFF;
-    padding: 1rem 2rem;
-    & h2 {
-        font-family: "Shrikhand";
-        font-weight: 400;
-        padding: 1rem 0;
+    padding-bottom: 1rem;
+    @media (min-width: 1024px){
+        padding: 1.89rem; 
     }
-    & p {
+    .footer__list {
+        @media (min-width: 1024px){
+            display: flex;
+            justify-content: flex-end;
+            h2 {
+                position: absolute;     
+                right: 4rem;   
+            }
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 261px;
+                height: 20px;
+                gap: 7px;
+                opacity: 0px;
+                max-width: 400px;
+            }
+
+        }
+        a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    li {
+        justify-content: space-between;
+        list-style: none;
+        padding: 0.5rem 0rem;
         margin: 0;
+        text-decoration: none;
+        }
+    h2{
+        color: #ffffff;
+        font-family: 'Shrikhand';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 18px;
     }
+    i {
+        width: 11px;
+        margin-right: 1rem;
+    }
+}
 }
